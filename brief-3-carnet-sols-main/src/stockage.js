@@ -12,5 +12,7 @@ const donnees = Json.parse(contenu)
 
 // Écrit le tableau dans le fichier, au format JSON indenté de 2 espaces.
 export async function enregistrerJson(chemin, enregistrements) {
-  throw new Error('TODO : coder enregistrerJson dans src/stockage.js');
+const anglo = JSON.stringify(enregistrements, null, 2);
+  await writeFile(chemin, anglo,"utf-8");
 }
+
