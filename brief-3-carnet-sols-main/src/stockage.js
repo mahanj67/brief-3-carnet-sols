@@ -6,7 +6,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 // Si le fichier n'existe pas ou n'est pas du JSON valide, laissez l'erreur remonter : le menu l'affichera.
 export async function chargerJson(chemin) {
 const contenu = await readFile(chemin, "utf-8");
-const donnees = Json.parse(contenu)
+const donnees = JSON.parse(contenu)
   return donnees;
 }
 
