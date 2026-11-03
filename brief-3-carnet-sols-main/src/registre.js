@@ -24,7 +24,7 @@ export function listerObservations(observations) {
 // Renvoie l'observation qui a cet identifiant de point, ou undefined si elle n'existe pas.
 export function trouverParId(observations, id) {
   if (!observations) return undefined;
-  return observations.find(obs => obs.id === id);
+  return observations.find(observation => observation.id === id);
 }
 
 
@@ -36,8 +36,10 @@ export function trouverParId(observations, id) {
 // · texture présente dans TEXTURES · pH nombre entre 0 et 14 (bornes comprises)
 // · etatHumidite présent dans HUMIDITES. N'ajoutez aucune autre règle que celles-ci.
 export function verifierObservation(saisie, observations) {
-  throw new Error('TODO : coder verifierObservation dans src/registre.js');
+  if (!observations) return undefined;
+  return observations.find(obs => obs.id === id);
 }
+
 
 // Fabrique l'observation à enregistrer à partir d'une saisie VALIDE : pH devient un nombre.
 export function creerObservation(saisie) {
