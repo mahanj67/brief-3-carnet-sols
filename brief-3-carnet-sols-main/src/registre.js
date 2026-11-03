@@ -14,6 +14,11 @@ export function formaterObservation(observation) {
 // Renvoie un texte avec une observation par ligne (lignes séparées par '\n'),
 // ou 'Aucune observation enregistrée.' si la liste est vide.
 export function listerObservations(observations) {
+  if (!observations || observations.length === 0) {
+    return 'Aucune observation enregistrée.';
+  }
+  return observations.map(obs => formaterObservation(obs)).join('\n');
+}
 
 
 // Renvoie l'observation qui a cet identifiant de point, ou undefined si elle n'existe pas.
