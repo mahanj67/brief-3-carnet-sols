@@ -19,7 +19,6 @@ export function phMinMax(observations) {
   };
 }
 
-
 // Renvoie un objet : pour chaque texture présente, le nombre d'observations.
 // Exemple : { sableux: 3, limoneux: 4, argileux: 3 }
 // Liste vide : {} (un objet vide).
@@ -30,6 +29,7 @@ export function compterParTexture(observations) {
     return acc;
   }, {});
 }
+
 
 // Renvoie un NOUVEAU tableau avec les observations dont le pH est STRICTEMENT inférieur au seuil.
 // Exemple : pointsADiscuter(observations, 5.5) garde 5.4 mais pas 5.5.
