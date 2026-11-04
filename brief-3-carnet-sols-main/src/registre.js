@@ -29,7 +29,7 @@ export function trouverParId(observations, id) {
 
 
 // Contrôle une saisie AVANT de l'ajouter. Tous les champs arrivent sous forme de TEXTE :
-// { id: 'S11', parcelle: 'P6', texture: 'limoneux', pH: '5,8', etatHumidite: 'humide' }
+// { id: 'SL11', parcelle: 'P6', texture: 'limoneux', pH: '5,8', etatHumidite: 'humide' }
 // Renvoie un tableau de messages d'erreur, un message par règle non respectée ;
 // un tableau vide signifie « saisie valide ».
 // Règles : id obligatoire et unique · parcelle obligatoire (n'importe quel texte non vide)
