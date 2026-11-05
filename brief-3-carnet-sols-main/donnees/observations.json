@@ -68,5 +68,12 @@
     "texture": "limoneux",
     "pH": 6.5,
     "etatHumidite": "intermédiaire"
+  },
+  {
+    "id": "P11",
+    "parcelle": "Parcelle Nord",
+    "texture": "limoneux",
+    "pH": 6.5,
+    "etatHumidite": "humide"
   }
 ]
