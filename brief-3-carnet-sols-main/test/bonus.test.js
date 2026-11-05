@@ -1,73 +1,37 @@
-// Tests du BONUS (src/bonus.js) : ils restent rouges tant que le bonus n'est pas codé.
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-import { modifierObservation, supprimerObservation, textureLaPlusFrequente, trierParPhDecroissant } from '../src/bonus.js';
+// BONUS — Pour aller plus loin. Facultatif : commencez seulement quand le socle est complet.
+// Fiche : fiches/7-bonus.md · Vérifier : npm run test:bonus
+// Ni pseudo-code de référence ni aide détaillée : à vous de combiner ce que vous avez appris.
+// Les choix 6 et 7 du menu sont à écrire vous-même dans app.js (voir la fiche).
+import { versNombre } from './outils.js';
+import { trouverParId, verifierObservation } from './registre.js';
+import { compterParTexture } from './synthese.js';
 
-// Copie figée des données de départ : vos ajouts dans donnees/observations.json ne changent pas les tests.
-const DONNEES = JSON.parse(readFileSync(new URL('./donnees-test.json', import.meta.url), 'utf8'));
+// Les champs qu'on a le droit de modifier. L'identifiant n'en fait pas partie.
+export const CHAMPS_MODIFIABLES = ['parcelle', 'texture', 'pH', 'etatHumidite'];
 
-function copieDesDonnees() {
-  return DONNEES.map((observation) => ({ ...observation }));
+// Supprime du carnet l'observation qui a cet identifiant.
+// Renvoie l'observation supprimée, ou undefined si elle n'existe pas (le carnet ne change pas).
+export function supprimerObservation(observations, id) {
+  throw new Error('TODO Bonus : coder supprimerObservation dans src/bonus.js');
 }
 
-test('bonus : supprimerObservation retire S03 et la renvoie', () => {
-  const observations = copieDesDonnees();
-  const supprimee = supprimerObservation(observations, 'S03');
-  assert.equal(supprimee.id, 'S03');
-  assert.equal(observations.length, 9);
-  assert.equal(observations.some((observation) => observation.id === 'S03'), false);
-});
+// Modifie UN champ d'une observation. La nouvelle valeur arrive sous forme de TEXTE et suit
+// les mêmes règles qu'à l'ajout. Renvoie les erreurs : [] si la modification est faite ;
+// sinon les messages, et l'observation ne change pas. Le pH modifié est enregistré comme un nombre.
+// Erreurs : identifiant introuvable · champ 'id' (non modifiable) · champ absent de CHAMPS_MODIFIABLES
+//           · valeur refusée par les règles de l'ajout.
+export function modifierObservation(observations, id, champ, valeur) {
+  throw new Error('TODO Bonus : coder modifierObservation dans src/bonus.js');
+}
 
-test('bonus : supprimerObservation d’un point inconnu renvoie undefined sans rien changer', () => {
-  const observations = copieDesDonnees();
-  assert.equal(supprimerObservation(observations, 'S99'), undefined);
-  assert.equal(observations.length, 10);
-});
+// Renvoie une COPIE triée par pH décroissant. Le tableau reçu ne doit pas changer d'ordre.
+export function trierParPhDecroissant(observations) {
+  throw new Error('TODO Bonus : coder trierParPhDecroissant dans src/bonus.js');
+}
 
-test('bonus : modifierObservation change le pH, écrit avec une virgule, en nombre', () => {
-  const observations = copieDesDonnees();
-  assert.deepEqual(modifierObservation(observations, 'S03', 'pH', '6,9'), []);
-  assert.equal(observations[2].pH, 6.9);
-});
-
-test('bonus : modifierObservation change la texture', () => {
-  const observations = copieDesDonnees();
-  assert.deepEqual(modifierObservation(observations, 'S01', 'texture', 'limoneux'), []);
-  assert.equal(observations[0].texture, 'limoneux');
-});
-
-test('bonus : modifierObservation refuse un pH de 14,5 sans rien changer', () => {
-  const observations = copieDesDonnees();
-  assert.notEqual(modifierObservation(observations, 'S03', 'pH', '14,5').length, 0);
-  assert.equal(observations[2].pH, 6.8);
-});
-
-test('bonus : modifierObservation refuse un point inconnu', () => {
-  assert.equal(modifierObservation(copieDesDonnees(), 'S99', 'pH', '6').length, 1);
-});
-
-test('bonus : modifierObservation refuse de changer l’identifiant ou un champ inconnu', () => {
-  const observations = copieDesDonnees();
-  assert.notEqual(modifierObservation(observations, 'S03', 'id', 'S30').length, 0);
-  assert.notEqual(modifierObservation(observations, 'S03', 'couleur', 'brun').length, 0);
-  assert.deepEqual(observations, DONNEES);
-});
-
-test('bonus : trierParPhDecroissant commence par S08 et finit par S04, sur une copie', () => {
-  const observations = copieDesDonnees();
-  const triee = trierParPhDecroissant(observations);
-  assert.equal(triee[0].id, 'S08');
-  assert.equal(triee[9].id, 'S04');
-  assert.equal(observations[0].id, 'S01');
-});
-
-test('bonus : textureLaPlusFrequente renvoie limoneux (4), ou null si le carnet est vide', () => {
-  assert.deepEqual(textureLaPlusFrequente(DONNEES), { texture: 'limoneux', nombre: 4 });
-  assert.equal(textureLaPlusFrequente([]), null);
-});
-
-test('bonus : textureLaPlusFrequente garde la première texture en cas d’égalité', () => {
-  const observations = [DONNEES[2], DONNEES[0]]; // argileux puis sableux
-  assert.deepEqual(textureLaPlusFrequente(observations), { texture: 'argileux', nombre: 1 });
-});
+// Renvoie { texture, nombre } pour la texture la plus fréquente, ou null si la liste est vide.
+// En cas d'égalité, la première texture rencontrée l'emporte.
+// Exemple : { texture: 'limoneux', nombre: 4 }
+export function textureLaPlusFrequente(observations) {
+  throw new Error('TODO Bonus : coder textureLaPlusFrequente dans src/bonus.js');
+}
