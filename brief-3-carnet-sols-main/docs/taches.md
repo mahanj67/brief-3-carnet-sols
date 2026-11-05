@@ -8,10 +8,10 @@
 | Fiche 2 : lire et écrire le JSON |03/11/2026 |03/11/2026 |Module stockage.js fonctionnel (chargerJson / enregistrerJson) |
 | Fiche 3 : ajouter et lister ; choix 1 et 2 ; erreurs | 05/05/2026  |05/05/2026 | dépôt github |
 | Fiche 4 : rechercher et trier ; choix 3 et 4 |04/12026 | 05/11/2026| dépôt github|
-| Fiche 5 : synthèse ; choix 5 | 04/11/2026  | 04/11/2026| |
+| Fiche 5 : synthèse ; choix 5 | 04/11/2026  | 04/11/2026| fiche releve-tests.md |
 | Tests par un camarade ; mes propres tests | 05/11/2026|05/11/2026 | fiche releve-test.md |
 | Fiche agronomique ; README ; documents | 04/11/2026 |05/11/2026 | dépôt github |
-| Dépôt cloné et lancé ailleurs ; démonstration répétée | 05/11/2026| 05/11/2026|  |
+| Dépôt cloné et lancé ailleurs ; démonstration répétée | 05/11/2026| 05/11/2026| VIEGNEKOU KOFFI |
 | Bonus | | | |
 
 **Blocages** (le message exact, ce que j'ai essayé, la solution) : 

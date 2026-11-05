@@ -1,7 +1,5 @@
 # Carnet d'observation des sols
 
-> Projet individuel du SAS DFS, brief 3 (sujet : [SUJET.md](SUJET.md)). Remplacez chaque ✏️ par votre texte, puis supprimez cette ligne.
-
 ## Contexte
 
 Dans la gestion agricole moderne, exploitant agricole  doit réaliser régulièrement des observations sur terrain pour suivre l'évolution des sols. Sa mission consiste à évaluer avec rigueur les caractéristiques physico-chimiques de chaque parcelle afin de garantir un suivi de qualité. Face au besoin de centraliser et d'archiver ces informations sans risque d'erreur, il utilise notre outil en ligne de commande. Pour ce faire, il saisit l'identifiant du point, la parcelle, la texture du sol, la valeur du pH et l'état d'humidité. Le programme valide ces données en temps réel, bloque les saisies incorrectes et lui affiche des listes structurées, des tris par pH ainsi que des synthèses statistiques. Il est important de noter que cet outil d'aide à la décision ne remplace pas une analyse de laboratoire et ne produit aucun conseil de fertilisation.  
@@ -35,11 +33,20 @@ Sous PowerShell, si `npm` est bloqué : `npm.cmd test`.
 
 ## Données
 
-✏️ *Le fichier, le nombre d'observations, les champs (voir [docs/dictionnaire-donnees.md](docs/dictionnaire-donnees.md)), le pH sans unité. Rappelez qu'elles sont fictives.*
+L'application s'appuie sur un fichier de stockage persistant au format JSON situé dans donnees/observations.json.
+Le jeu de données initial comporte plusieurs observations fictives structurées selon les critères de la ferme pédagogique (voir docs/dictionnaire-donnees.md). 
+
+Chaque observation est caractérisée par un identifiant unique, le nom d'une parcelle, une texture de sol normalisée, un pH mesuré compris entre 0 et 14 et un état d'humidité.
+
+l'ensemble de ces données est strictement fictif et sert de support pédagogique aux travaux pratiques de la formation.
 
 ## Limites
+ 
+le carnet repère des valeurs à discuter, mais ne produit aucun diagnostic de fertilisation.
 
-✏️ *Au moins trois. Par exemple : le carnet repère des valeurs à discuter, mais ne produit aucun diagnostic de fertilisation.*
+Toutes les analyses reposent sur un fichier JSON stocké localement, sans connexion à des capteurs de terrain en temps réel ou à une base de données distante.
+
+Chaque point de prélèvement ne comporte qu'une seule observation à un instant donné, sans historique temporel permettant d'étudier l'évolution de la parcelle au fil des saisons. 
 
 ## Documents
 
@@ -49,3 +56,4 @@ Sous PowerShell, si `npm` est bloqué : `npm.cmd test`.
 
 ✏️ *Prénom NOM, compte GitHub. Entraide : avec qui, sur quoi.*
 Jean Marc Mahan, mahanj67. 
+j'ai été aidé par

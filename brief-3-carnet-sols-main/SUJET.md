@@ -45,8 +45,8 @@ Les observations sont lues dans `donnees/observations.json`, et chaque ajout y e
 | `test/` | Les tests fournis ; `donnees-test.json` est une copie figée des données de départ | Ne pas modifier ; vous pouvez ajouter des tests |
 | `fiches/` | Le détail de chaque partie | À lire |
 | `docs/`, `README.md` | Vos livrables écrits | À compléter |
-| Fiche de terrain | Remise par le coach agronomie | À citer |
-
+*| Fiche de terrain | Remise par le coach agronomie | À citer |
+*
 ## Démarrer
 
 1. Vérifiez `node --version` (20 ou plus) et `git --version`. Configurez Git **à votre nom** :
