@@ -54,6 +54,6 @@ Chaque point de prélèvement ne comporte qu'une seule observation à un instant
 
 ## Auteur
 
-✏️ *Prénom NOM, compte GitHub. Entraide : avec qui, sur quoi.*
+ Prénom NOM, compte GitHub. Entraide : avec qui, sur quoi.
 Jean Marc Mahan, mahanj67. 
-j'ai été aidé par
+j'ai été aidé par: DADIER jEAN-MARC sur les erreur sur l'application
