@@ -3,7 +3,7 @@
 | Point | Parcelle | Texture | pH | Humidité | Le constat, en une phrase |
 | --- | --- | --- | --- | --- | --- |
 | S01| |P1 |sableux | 5.2 | sec |Sol sableux présentant une acidité marquée sous le seuil de vigilance et un profil sec |
-| s02 |P1 | limoneux | 6.1| intermédiaire| Sol limoneux à tendance légèrement acide offrant un bon équilibre hydrique intermédiaire |
+| S02 |P1 | limoneux | 6.1| intermédiaire| Sol limoneux à tendance légèrement acide offrant un bon équilibre hydrique intermédiaire |
 
 **Un lien possible avec l'eau ou les plantes**, pour l'une des deux :
 
