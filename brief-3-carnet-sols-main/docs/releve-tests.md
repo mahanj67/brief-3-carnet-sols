@@ -15,4 +15,4 @@
 | Choix d'une option invalide dans le menu (ex: option 9)| Message d'avertissement indiquant que l'option est invalide et réaffichage du menu| Conforme : message d'erreur affiché et rebouclage propre|moi même |
 | Ajout valide d'une observation (P11, Parcelle Nord, limoneux, 6.5, humide) | |Conforme : l'observation est ajoutée au fichier JSON et retrouvée après relance |moi même |
 
-**Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) : ✏️
+**Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) 
