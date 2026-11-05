@@ -4,10 +4,10 @@
 
 | Champ | Signification | Type | Règle de validation | Unité | Exemple |S04
 | --- | --- | --- | --- | --- | --- |
-| id | Identifiant unique | texte | non vide,V absent des données | — | S03 |
-| parcelle| |texte | non vide, dois correspondre à une parcelle existant| — | P2|
+| id | Identifiant unique | texte | non vide,V absent des données | sans unité | S03 |
+| parcelle| |texte | non vide, dois correspondre à une parcelle existant| sans unité| P2|
 | PH |niveau d'acidité du sol|nombre décimal |nombre de 0 à 14 | sans unité | 5.5 |
-| Etat d'Humidité|taux d'humidité du sol | décimal | compris entre 0 et 1 ou entre 0 et 100 | — |70.4 |
+| Etat d'Humidité| taux d'humidité du sol | décimal | compris entre 0 et 1 ou entre 0 et 100 | sans unité|70.4 |
 | texture | la répartition granulométrique des particules minérales | texte| valeur parmi la liste autorisée | sans unité | sableux |
 
 **Listes de valeurs autorisées** : 
